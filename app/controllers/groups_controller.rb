@@ -12,7 +12,6 @@ class GroupsController < ApplicationController
   def edit
   end
 
-
   def new
     @group = Group.new
   end
@@ -27,15 +26,13 @@ class GroupsController < ApplicationController
     end
   end
 
-
-
   def update
     if @group.update(group_params)
-          redirect_to groups_path, notice: "Update Success"
-        else
-          render :edit
-        end
-      end
+      redirect_to groups_path, notice: "Update Success"
+    else
+      render :edit
+    end
+  end
 
 
   def destroy
